@@ -1,21 +1,21 @@
-import React from "react";
-import { GoogleAuthProvider, signInWithPopup } from "firebase/auth";
-import { auth } from "../../firebase.config";
+import React from 'react';
+import {GoogleAuthProvider, signInWithPopup} from 'firebase/auth';
+import {auth} from '../../firebase.config';
 
 const Signup = () => {
-  const provider = new GoogleAuthProvider();
+  const provider = new GoogleAuthProvider ();
 
-  const handleGoogleSignin = (e) => {
-    e.preventDefault();
-    signInWithPopup(auth, provider)
-      .then((result) => {
-        console.log(result.user);
+  const handleGoogleSignin = e => {
+    e.preventDefault ();
+    signInWithPopup (auth, provider)
+      .then (result => {
+        console.log (result.user);
       })
-      .catch((error) => {
-        console.log(error.message);
+      .catch (error => {
+        console.log (error.message);
       });
   };
-  
+
   return (
     <div>
       <div className="card bg-base-100 w-full mx-auto max-w-sm shrink-0 shadow-2xl">

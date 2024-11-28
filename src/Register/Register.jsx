@@ -1,18 +1,18 @@
-import React from "react";
-import { auth } from "../firebase.config";
-import { signInWithPopup, GithubAuthProvider } from "firebase/auth";
+import React from 'react';
+import {auth} from '../firebase.config';
+import {signInWithPopup, GithubAuthProvider} from 'firebase/auth';
 
 const Register = () => {
-  const Provider = new GithubAuthProvider();
+  const Provider = new GithubAuthProvider ();
 
-  const handleGithubSignin = (e) => {
-    e.preventDefault()
-    signInWithPopup(auth, Provider)
-      .then((result) => {
-        console.log(result.user);
+  const handleGithubSignin = e => {
+    e.preventDefault ();
+    signInWithPopup (auth, Provider)
+      .then (result => {
+        console.log (result.user);
       })
-      .catch((error) => {
-        console.log(error.message);
+      .catch (error => {
+        console.log (error.message);
       });
   };
 
