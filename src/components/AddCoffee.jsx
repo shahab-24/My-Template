@@ -40,7 +40,7 @@ const AddCoffee = () => {
     }
   return (
     <div className="container mx-auto bg-gray-300 p-6">
-        <h3 className="text-center text-white text-xl mb-10">Add Coffee</h3>
+        <h3 className="text-center mb-10 text-orange-500 text-2xl font-semibold">Add Coffee</h3>
       <form onSubmit={handleAddCoffee}>
       <div className="flex flex-col md:flex-row lg:flex-row gap-4 w-full">
         <div className="w-full">

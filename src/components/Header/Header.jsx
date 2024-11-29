@@ -13,6 +13,9 @@ const Header = () => {
         <NavLink to="/coffee">Coffee</NavLink>
       </li>
       <li>
+        <NavLink to="/addCoffee">Add Coffee</NavLink>
+      </li>
+      <li>
         <NavLink to="/signup">Sign Up</NavLink>
       </li>
       <li>

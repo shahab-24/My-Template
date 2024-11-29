@@ -13,6 +13,7 @@ import SignInEmail from "./components/Header/SignInEmail/SignInEmail";
 import AuthProvider from "./Provider/AuthProvider";
 import AddCoffee from "./components/AddCoffee";
 import AllCoffee from "./components/AllCoffee";
+import UpdateCoffee from "./components/UpdateCoffee";
 
 const router = createBrowserRouter([
   {
@@ -44,6 +45,11 @@ const router = createBrowserRouter([
         path: "/coffee",
         element: <AllCoffee />,
         loader: () => fetch('http://localhost:3000/coffee')
+      },
+      {
+        path: "/updateCoffee/:id",
+        element: <UpdateCoffee />,
+        loader: ({params}) => fetch(`http://localhost:3000/coffee/${params.id}`)
       },
     ],
   },
